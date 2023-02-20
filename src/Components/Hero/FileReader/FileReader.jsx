@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const FileReadercomp = () => {
+export const FileRead= () => {
   const [selectedIMG, setSelectedIMG] = useState(null);
   const [IMGSrc, setIMGSrc] = useState("");
 

@@ -1,9 +1,9 @@
-import { FileReadercomp } from "./FileReader/FileReader";
+import { FileRead } from "./FileReader/FileReader";
 
 export const Hero = () => {
   return (
     <>
-      <FileReadercomp />
+      <FileRead />
     </>
   );
 };
