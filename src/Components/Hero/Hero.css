@@ -1,0 +1,19 @@
+.FileReader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.FileReader input {
+  margin-top: 55px;
+  font-size: 22px;
+}
+
+.image-container {
+  margin-top: 150px;
+  height: 720px;
+  z-index: 999;
+  margin-top: 150px;
+  border: 5px solid black;
+}

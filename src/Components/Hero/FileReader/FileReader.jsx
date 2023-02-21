@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export const FileRead= () => {
+export const FileRead = () => {
   const [selectedIMG, setSelectedIMG] = useState(null);
   const [IMGSrc, setIMGSrc] = useState("");
 
@@ -19,15 +19,17 @@ export const FileRead= () => {
   };
 
   return (
-    <div>
+    <div className="FileReader">
       <input type="file" id="inputImage" onChange={handleFileInputChange} />
       {selectedIMG && (
-        <img
-          id="imagePreview"
-          src={IMGSrc}
-          alt="pic"
-          style={{ maxWidth: "100%" }}
-        />
+        <div className="image-container">
+          <img
+            id="imagePreview"
+            src={IMGSrc}
+            alt="pic"
+            style={{ maxWidth: "100%" }}
+          />
+        </div>
       )}
     </div>
   );

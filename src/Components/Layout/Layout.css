@@ -33,3 +33,15 @@ footer h1 {
 footer {
   margin-top: 83.8vh;
 }
+
+main {
+  margin: 0 auto;
+
+  max-width: 1240px;
+}
+
+@media (min-width: 1440px) {
+  main {
+    max-width: 1440px;
+  }
+}
