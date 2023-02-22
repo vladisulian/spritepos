@@ -1,9 +1,8 @@
-import "./SpriteScaling.css";
+import "./SpritePos.css";
 
 export const SpritePos = ({ changeSpritePosition }) => {
-  const handleChangePosition = (e) => {
+  const handleChangePosition = (e) =>
     changeSpritePosition(e.target.id, e.target.value);
-  };
 
   //   spriteImage.style.
   return (
@@ -19,6 +18,7 @@ export const SpritePos = ({ changeSpritePosition }) => {
           defaultValue={0}
         />
       </label>
+
       <label>
         Позиция по горизонтали
         <input

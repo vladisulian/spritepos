@@ -1,6 +1,6 @@
 import "./Hero.css";
 import { FileRead } from "./FileReader/FileReader";
-import { SpritePos } from "./SpriteScaling/SpriteScaling";
+import { SpritePos } from "./SpritePosition/SpritePos";
 import { useState } from "react";
 
 export const Hero = () => {
@@ -70,7 +70,9 @@ export const Hero = () => {
               />
             )}
           </div>
-          <SpritePos changeSpritePosition={handleChangeSpritePos} />
+          {selectedSprite && (
+            <SpritePos changeSpritePosition={handleChangeSpritePos} />
+          )}
         </>
       )}
     </>
