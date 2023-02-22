@@ -32,11 +32,14 @@ label {
   height: 720px;
 
   margin: 0 auto;
-  margin-top: 150px;
+  margin-top: 130px;
+
+  border-radius: 22px;
 }
 
 #sprite {
   position: absolute;
   right: 0;
-  bottom: -65px;
+  bottom: 0;
+  /* bottom: -65px; */
 }
