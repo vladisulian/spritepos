@@ -1,10 +1,6 @@
-import { useState } from "react";
 import "./SpriteScaling.css";
 
 export const SpritePos = ({ changeSpritePosition }) => {
-  //   const verticalPosInput = document.querySelector("#verticalPosition");
-  //   const horizontalPosInput = document.querySelector("#horizontalPosition");
-
   const handleChangePosition = (e) => {
     changeSpritePosition(e.target.id, e.target.value);
   };
@@ -20,6 +16,7 @@ export const SpritePos = ({ changeSpritePosition }) => {
           onInput={handleChangePosition}
           min="-150"
           max="150"
+          defaultValue={0}
         />
       </label>
       <label>
@@ -27,8 +24,9 @@ export const SpritePos = ({ changeSpritePosition }) => {
         <input
           type="range"
           id="horizontalPosition"
-          min="-150"
-          max="1000"
+          min="-1000"
+          max="200"
+          defaultValue={0}
           onInput={handleChangePosition}
         />
       </label>

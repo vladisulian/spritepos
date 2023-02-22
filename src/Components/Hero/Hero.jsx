@@ -41,7 +41,7 @@ export const Hero = () => {
         break;
 
       case "horizontalPosition":
-        spriteImage.style.right = value + "px";
+        spriteImage.style.right = -value + "px";
         break;
 
       default:
