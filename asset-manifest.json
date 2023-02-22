@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/spritepos/static/css/main.afb2e655.css",
+    "main.css": "/spritepos/static/css/main.b1642c63.css",
     "main.js": "/spritepos/static/js/main.805f6751.js",
     "index.html": "/spritepos/index.html",
-    "main.afb2e655.css.map": "/spritepos/static/css/main.afb2e655.css.map",
+    "main.b1642c63.css.map": "/spritepos/static/css/main.b1642c63.css.map",
     "main.805f6751.js.map": "/spritepos/static/js/main.805f6751.js.map"
   },
   "entrypoints": [
-    "static/css/main.afb2e655.css",
+    "static/css/main.b1642c63.css",
     "static/js/main.805f6751.js"
   ]
 }
