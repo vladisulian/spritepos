@@ -4,12 +4,13 @@ import { SpritePos } from "./SpritePosition/SpritePos";
 import { useState } from "react";
 
 export const Hero = () => {
+  // * pictures
   const [selectedIMG, setSelectedIMG] = useState(null);
   const [selectedSprite, setSelectedSprite] = useState(null);
-
+  // * pictures src
   const [IMGSrc, setIMGSrc] = useState("");
   const [spriteSrc, setSpriteSrc] = useState("");
-
+  // * view position in px
   const [vertikal, setVertikal] = useState(0);
   const [horizontal, setHorizontal] = useState(0);
 
@@ -39,7 +40,6 @@ export const Hero = () => {
     const spriteImage = document.querySelector("#sprite");
     switch (id) {
       case "verticalPosition":
-        // console.log(id, value);
         spriteImage.style.bottom = value + "px";
         setVertikal(value);
         break;
