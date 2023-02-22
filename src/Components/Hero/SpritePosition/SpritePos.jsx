@@ -1,14 +1,13 @@
 import "./SpritePos.css";
 
-export const SpritePos = ({ changeSpritePosition }) => {
+export const SpritePos = ({ changeSpritePosition, vertikal, horizontal }) => {
   const handleChangePosition = (e) =>
     changeSpritePosition(e.target.id, e.target.value);
 
-  //   spriteImage.style.
   return (
     <div className="scale-container">
       <label>
-        Позиция по вертикали
+        Позиция по вертикали (top = {vertikal}px)
         <input
           type="range"
           id="verticalPosition"
@@ -20,12 +19,12 @@ export const SpritePos = ({ changeSpritePosition }) => {
       </label>
 
       <label>
-        Позиция по горизонтали
+        Позиция по горизонтали(left = {horizontal}px)
         <input
           type="range"
           id="horizontalPosition"
-          min="-1000"
-          max="200"
+          min="-200"
+          max="1000"
           defaultValue={0}
           onInput={handleChangePosition}
         />

@@ -6,6 +6,7 @@
 }
 
 label {
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -13,11 +14,29 @@ label {
 
   max-width: 180px;
 
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: italic;
   font-size: 22px;
-  font-weight: 600;
 
   text-align: center;
 }
+
+.choose-background {
+  position: absolute;
+  left: -93px;
+  bottom: -30px;
+
+  width: 383px;
+
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+
+  color: darkblue;
+}
+
 .FileReader input {
   font-size: 22px;
   color: white;

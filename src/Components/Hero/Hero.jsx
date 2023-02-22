@@ -10,6 +10,9 @@ export const Hero = () => {
   const [IMGSrc, setIMGSrc] = useState("");
   const [spriteSrc, setSpriteSrc] = useState("");
 
+  const [vertikal, setVertikal] = useState(0);
+  const [horizontal, setHorizontal] = useState(0);
+
   const handleAddIMG = (e) => {
     const img = e.target.files[0];
     setSelectedIMG(img);
@@ -32,16 +35,18 @@ export const Hero = () => {
     reader.onloadend = () => setSpriteSrc(reader.result);
   };
 
-  const spriteImage = document.querySelector("#sprite");
   const handleChangeSpritePos = (id, value) => {
+    const spriteImage = document.querySelector("#sprite");
     switch (id) {
       case "verticalPosition":
         // console.log(id, value);
         spriteImage.style.bottom = value + "px";
+        setVertikal(value);
         break;
 
       case "horizontalPosition":
-        spriteImage.style.right = -value + "px";
+        spriteImage.style.left = value + "px";
+        setHorizontal(value);
         break;
 
       default:
@@ -51,7 +56,12 @@ export const Hero = () => {
 
   return (
     <>
-      <FileRead handleAddIMG={handleAddIMG} handleAddSprite={handleAddSprite} />
+      <FileRead
+        handleAddIMG={handleAddIMG}
+        handleAddSprite={handleAddSprite}
+        selectedIMG={selectedIMG}
+        selectedSprite={selectedSprite}
+      />
       {selectedIMG && (
         <>
           <div className="image-container">
@@ -71,7 +81,11 @@ export const Hero = () => {
             )}
           </div>
           {selectedSprite && (
-            <SpritePos changeSpritePosition={handleChangeSpritePos} />
+            <SpritePos
+              changeSpritePosition={handleChangeSpritePos}
+              vertikal={vertikal}
+              horizontal={horizontal}
+            />
           )}
         </>
       )}
